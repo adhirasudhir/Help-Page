@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+   <style> * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        width: 100vw;
+        min-height: 100vh;
+        background-color: #393839;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .container .box {
+        position: relative;
+        width: 30rem;
+        height: 35rem;
+        margin: 6rem;
+      }
+      .about-section {
+  padding: 10px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+      .container .box:hover .imgBox {
+        transform: translate(-4.5rem, -4.5rem);
+      }
+      .container .box:hover .content {
+        transform: translate(3.5rem, 3.5rem);
+      }
+      .imgBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        transition: all 0.5s ease-in-out;
+      }
+      
+      .imgBox img {
+        width: 30rem;
+        height: 35rem;
+        object-fit: cover;
+        resize: both;
+      }
+      .button,a {
+       
+       padding: 8px;
+        color: white;
+        background-color: #474e5d;
+       
+       cursor: pointer;
+        width: 100%;
+       text-decoration:none;
+        }
+      
+      .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        z-index: 1;
+        align-items: flex-end;
+        text-align: center;
+        transition: 0.5s ease-in-out;
+      }
+      
+      .content h2 {
+        display: block;
+        font-size: 2rem;
+        color: #111;
+        font-weight: 500;
+        line-height: 2rem;
+        letter-spacing: 1px;
+      }
+      
+      .content span {
+        color: #555;
+        font-size: 1.4rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+      
+      
+      @media (max-width: 600px) {
+        .container .box:hover .content {
+          transform: translate(0, 3.5rem);
+        }
+        .container .box:hover .imgBox {
+          transform: translate(0, -3.5rem);
+        }
+      }
+      </style>
+  </head>
+  <body>
+    <div class="about-section">
+      <h1 style="font-size:50px;">About Us</h1>
+      <h2 style="font-size:35px;">Knowledge is Best When It's Shared.</h2>
+    <div class="container">
+      <div class="box">
+        <div class="imgBox">
+          <img src="images/picc.jpeg" alt="picc" alt=""/>
+        </div>
+        <div class="content">
+          <h2>
+            Drishti<br />
+            <span><b>ADIT(IBM)</b> Trainee at <b>NSTI Noida</b></span>
+            <p><button class="button"><a href="https://drishtichakarvarty.github.io/creative-cv/" style="text-decoration: none;"><font size="5">More Details...</font></a></button></p>
+          </h2>
+        </div>
+      </div>
+
+      
+      <div class="box">
+        <div class="imgBox">
+          <img src="images/pic.jpeg" alt="Sudhir" alt=""/>
+        </div>
+        <div class="content">
+          <h2>
+            Sudhir<br />
+            <span><b>ADIT(IBM)</b> Trainee at <b>NSTI Noida</b></span>
+            <p><button class="button"><a href="https://adhirasudhir.github.io/sudhircreative-cv/"><font size="5">More Details...</font></a></button></p>
+          </h2>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <link rel="manifest" href="./manifest.json">
+  <title>Help-Page | Purpose-Built favourites site</title>
+
+  <!--  Bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <!--  StyleSheet  -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bookmarks.css">
+
+  <!--  Font Awesome  -->
+  <script src="https://kit.fontawesome.com/a9bed65047.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <!--  Google Fonts  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap" rel="stylesheet">
+
+  <!--  Favicon  -->
+  <link rel="shortcut icon" href="images/green-favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/home.ico" type="image/x-icon">
+
+  <!--  Bootstrap JS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</head>
+
+<body class="light_dark" onload="fetchBookmarks()">
+  <div class="row" id="bookmarks_parent" style="display: none;">
+    <div id="bookmarks" class="light_dark">
+      <form id="myForm" class="col-12">
+        <div class="col-4 form-group">
+          <label for="">Name</label>
+          <input type="text" class="form-control" id="siteName" placeholder="Enter Name for Bookmark">
+        </div>
+        <div class="col-4 form-group">
+          <label for="">URL</label>
+          <input type="text" class="form-control" id="siteURL" placeholder="Enter URL to Bookmark">
+        </div>
+        <button class="btn btn-primary" type="submit">Add Bookmark</button>
+      </form>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg light_dark ">
+    <div class="container-fluid">
+      <a href="index.html" class="navbar-brand" id="helpage">Help-Page</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: 400px;">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" style="color:#fff; font-size:30px; margin:auto 0;"></i>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div class="navbar-nav mr-auto">
+          
+          <!-- Login Logo --> 
+          <div class="dropdown" style="width: 150px; margin-left: 300px;">
+            <div class="dropbtn">👤</div>
+            <div class="dropdown-content">
+              <a href="Website Forms/Login Form/LoginPage/signup.html">Sign-Up</a>
+              <a href="Website Forms/Login Form/LoginPage/login.html">Sign-In</a>
+            </div>
+            </div>
+
+
+          <div class="nav-item dropdown" style="display: flex; height: 44.5px">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Bookmarks</a>
+            <div class="dropdown-menu bookmarks light_dark" aria-labelledby="navbarDropdownMenuLink"
+              id="bookmarksOutput"></div>
+            <button class="btn light_dark" id="bookmarks_toggler">&plus; Add</button>
+
+          </div>
+                 
+          </div>           
+              
+        </div>
+        <!-- dark mode toggle -->
+        <div id="dark-mode-toggle">
+          <div type="button" id="dark-mode-toggle-button" data-toggle="button" aria-pressed="false"
+            autocomplete="off">🌞</div>
+        </div>
+      </div>
+  </nav>
+
+
+
+
+  <!-- heading -->
+  <!-- <WELCOME MESSAGE> -->
+  <!-- Add your Name Below after "Welcome, __" . -->
+  <div class="row">
+    <div id="salutation" class="col-12 light_dark">
+      Welcome, <span id="user_name">User</span>
+    </div>
+  </div>
+
+  <!-- search bar -->
+  <nav class="navbar">
+    <div class="container-fluid">
+      <form class="d-flex search" action="https://www.google.com/search">
+        <input class="form-control me-2 searchBar light_dark_neo" type="search" autofocus="autofocus"
+          placeholder="Powered by Google..." aria-label="Search" name=q id=q>
+        <button class="btn btn-outline btn-dark searchButton light_dark_neo" type="submit">🔍</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Icons -->
+
+  <div class="container">
+    <div class="row bootstrapRow">
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+          
+        <div class="icons light_dark_neo">
+          <a href="website/index1.html" target="_blank">
+            <img src="assets/logoo.svg" alt="kaggle" height="100">
+          </a>
+          <span class="hover_txt">Design Your Code</span>
+        </div>
+
+		
+      </div>
+            <!-- <ADD ICON HERE> -->
+
+          <!--Cyber Security by Anshika patel  -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://anshika20-02.github.io/2nd-Project/" target="_blank">
+                <img src="assets/cyber.svg" alt="LWF" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">Cyber Security</span>
+            </div>
+            </div>
+
+
+          <!-- <ADD ICON HERE> -->
+
+          <!--E learning by Anshika patel  -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://anshika20-02.github.io/elearning/" target="_blank">
+                <img src="assets/anshika.svg" alt="LWF" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">E-Learning</span>
+            </div>
+            </div>
+          
+          <!-- <ADD ICON HERE> -->
+
+          <!--DBMS by Sumit  -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://sumit10-08.github.io/dbms2nd/" target="_blank">
+                <img src="assets/dbms.svg" alt="RDBMS" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">DBMS </span>
+            </div>
+            </div>
+
+            		    <!-- <ADD ICON HERE> -->
+
+          <!-- Learn With code by Prateek -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://prateekm809.github.io/learnWithFun/" target="_blank">
+                <img src="assets/pratik.svg" radius="50%" alt="LWF" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">Learn With Fun</span>
+            </div>
+            </div>
+
+      
+
+    <!-- <ADD ICON HERE> -->
+
+          <!-- Computer Hardware -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://adhirasudhir.github.io/ComputerHardwareKnowledge/" target="_blank">
+                <img src="assets/hardware.svg" alt="ComputerHardware" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">ComputerHardware</span>
+            </div>
+      
+        
+          </div>
+		
+          <!-- <ADD ICON HERE> -->
+
+          <!--Mathura Darshan By kumkum  -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://kumkum99.github.io/mathuraDarshan/" target="_blank">
+                <img src="assets/kumkum.svg" alt="RDBMS" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">मथुरा दर्शन </span>
+            </div>
+            </div>
+
+
+            <!-- <ADD ICON HERE> -->
+
+          <!--Delhi tourism by Arvinder  -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="http://arvindersaina.github.io/projectx/" target="_blank">
+                <img src="assets/Tourism.svg" alt="Tourism" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">Delii Tourism</span>
+            </div>
+            </div>
+               
+            
+       <!-- <ADD ICON HERE> -->
+
+      <!--Travel By Gaurav  -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://gaurav-ji145.github.io/singleproj/#home" target="_blank">
+            <img src="assets/travel.svg" alt="Gmail" height="100" width="100px">
+          </a>
+          <span class="hover_txt">Travel Yaari</span>
+        </div>
+		
+      </div>
+
+
+            <!-- <ADD ICON HERE> -->
+
+      <!--7Wonders By Anshika pal  -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://anshikasevenwonders.000webhostapp.com/" target="_blank">
+            <img src="assets/7wonders.svg" alt="Gmail" height="100" width="100px">
+          </a>
+          <span class="hover_txt">7Wonders</span>
+        </div>
+		
+      </div>
+
+                  <!-- <ADD ICON HERE> -->
+
+          <!--RANTHAMBORE NATIONAL PARK by Kraiti  -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://shuklakrati.github.io/Ranthambore-National-Park/index.html" target="_blank">
+                <img src="assets/park.svg" alt="LWF" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">R. NATIONAL PARK</span>
+            </div>
+            </div>
+
+       <!-- <ADD ICON HERE> -->
+
+          <!-- NSTI Noida by Rahila -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://rahila7999.github.io/NSTI_Noida/" target="_blank">
+                <img src="assets/rk.svg" alt="Veg" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">NSTI Noida</span>
+            </div>
+          </div>
+
+     <!-- <ADD ICON HERE> -->
+
+      <!-- Aiims By Aabhishek Shukla -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://iabhi1703.github.io/AIIMS/" target="_blank">
+            <img src="assets/aiims.svg" alt="Aiims" height="100px" wight="100px">
+          </a>
+          <span class="hover_txt">Aiims</span>
+        </div>
+
+      </div>
+
+            <!-- <ADD ICON HERE> -->
+
+      <!-- Kids Zone By Kumkum -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://kumkum99.github.io/my_project/" target="_blank">
+            <img src="assets/kids.svg" alt="Kids Corner" height="100px" wight="100px">
+          </a>
+          <span class="hover_txt">Kids Corner</span>
+        </div>
+
+      </div>
+
+      	 <!-- <ADD ICON HERE> -->
+
+      <!-- Anytime Fitness By Chandni -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://chandani1234567.github.io/TeamProject/" target="_blank">
+            <img src="assets/gym.svg" alt="youtube" height="100px" width="100px">
+          </a>
+          <span class="hover_txt">Anytime Fitness</span>
+        </div>
+		
+      </div>
+
+         <!-- <ADD ICON HERE> -->
+
+          <!--Pet Care by Vinita & Tushar  -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://vinitarawat.github.io/petcare2/" target="_blank">
+                <img src="assets/vinita.svg" alt="LWF" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">Pet Care</span>
+            </div>
+            </div> 
+
+          	      <!-- <ADD ICON HERE> -->
+
+      <!-- Step And Style by vidushi -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://vidushigarg01.github.io/Step-And-Style/" target="_blank">
+            <img src="assets/sas.svg" alt="Whatsapp" height="100px" width="100px">
+          </a>
+          <span class="hover_txt">Step And Style</span>
+        </div>
+	
+      </div>
+
+     <!-- <ADD ICON HERE> -->
+
+      <!-- Ufitness by Tushar -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://tushar0926.github.io/Mywebpage/" target="_blank">
+            <img src="assets/fitness.svg" alt="Whatsapp" height="100px" width="100px">
+          </a>
+          <span class="hover_txt">UFitness</span>
+        </div>
+	
+      </div>
+
+
+     		  <!-- <ADD ICON HERE> -->
+
+          <!-- Beauty & Salon By Pratima -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://partima70.github.io/Beauty-salon/" target="_blank">
+                <img src="assets/salon.svg" alt="kaggle" height="100" width="100px">
+              </a>
+              <span class="hover_txt">Beauty & salon</span>
+            </div>
+      
+        
+          </div>
+
+		  <!-- <ADD ICON HERE> -->
+
+          <!-- Fresh Flower By Sadhana -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://sadhana-12345.github.io/1st_project/" target="_blank">
+                <img src="assets/flower.svg" alt="kaggle" height="100" width="100px">
+              </a>
+              <span class="hover_txt">Fresh flower</span>
+            </div>
+      
+        
+          </div>
+
+
+        	<!-- <ADD ICON HERE> -->
+
+      <!-- Girly by Imrana -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo ">
+          <a href="https://immo1999.github.io/Beauty/" target="_blank">
+            <img src="assets/girly.svg" alt="girly" height="100px">
+          </a>
+          <span class="hover_txt">Girly</span>
+		  
+        </div>
+		
+      </div>
+	  
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- Wedding Planner By Anchal Kumari & Anju Kumari -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://aanchal5555.github.io/wedding_planner/" target="_blank">
+            <img src="assets/wedding.svg" alt="instagram" height="100px">
+          </a>
+          <span class="hover_txt">Wedding Planner</span>
+        </div>
+	
+      </div>
+
+
+            <!-- <ADD ICON HERE> -->
+
+      <!-- Eventor by Rohit Kumar -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://rohitkr0709.github.io/event1/" target="_blank">
+            <img src="assets/eventor.svg" alt="instagram" height="100px">
+          </a>
+          <span class="hover_txt">Eventor</span>
+        </div>
+	
+      </div>
+	
+
+            <!-- <ADD ICON HERE> -->
+
+      <!-- Photo Hub by Tannu -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://dhandatannu.github.io/singleproject/" target="_blank">
+            <img src="assets/photo.svg" alt="medium" height="100px" width="100px">
+          </a>
+          <span class="hover_txt">Photo Hub</span>
+        </div>
+		
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- Cake Bake by Varsha & sheetal -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://varshakharolia.github.io/Varsha_Bakeri_Website/index.html" target="_blank">
+            <img src="assets/cake.svg" alt="medium" height="100px" width="100px">
+          </a>
+          <span class="hover_txt">Cake Bake</span>
+        </div>
+		
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- Eat Fresh by Varsha -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://varshakharolia.github.io/eat-fresh/" target="_blank">
+            <img src="assets/food.svg" alt="medium" height="100px" width="100px">
+          </a>
+          <span class="hover_txt">Eat Fresh</span>
+        </div>
+		
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!--Delicious By Nisha  -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://nisha1612.github.io/Delicious/" target="_blank">
+            <img src="assets/sweet.svg" alt="Gmail" height="100" width="100px">
+          </a>
+          <span class="hover_txt">Delicious Sweets</span>
+        </div>
+		
+      </div>
+
+      
+          <!-- <ADD ICON HERE> -->
+
+          <!--Coffe By Rohit and Anju Luthra  -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://anjuluthra13.github.io/coffee/index.html" target="_blank">
+                <img src="assets/coffe.svg" alt="Tourism" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">coffee </span>
+            </div>
+            </div>
+
+	
+		  <!-- <ADD ICON HERE> -->
+
+          <!-- Food -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://drishtichakarvarty.github.io/website/index.html" target="_blank">
+                <img src="assets/veg.svg" alt="Veg" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">Food</span>
+            </div>
+          </div>
+
+          		  <!-- <ADD ICON HERE> -->
+
+          <!-- Coffee cafe by Sajan -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://monipandey.github.io/cafe/" target="_blank">
+                <img src="assets/cafe.svg" alt="Veg" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">Coffee Cafe</span>
+            </div>
+          </div>
+
+          <!-- <ADD ICON HERE> -->
+
+          <!--Interior Design by Kraiti  -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://jasleen200000001.github.io/multi-project/index.html" target="_blank">
+                <img src="assets/education.svg" alt="LWF" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">Padai</span>
+            </div>
+            </div>
+
+          <!-- <ADD ICON HERE> -->
+
+          <!--Interior Design by Kraiti  -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://shuklakrati.github.io/Interior/index.html" target="_blank">
+                <img src="assets/interior.svg" alt="LWF" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">Interior Design</span>
+            </div>
+            </div>
+		
+
+          		<!-- <ADD ICON HERE> -->
+
+          <!--Gaming Geeks by Gaurav  -->
+
+          <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+            <div class="icons light_dark_neo">
+              <a href="https://gaurav-ji145.github.io/team_project/" target="_blank">
+                <img src="assets/gaurav.svg" alt="LWF" height="100px" width="100px">
+              </a>
+              <span class="hover_txt">Gaming Geeks</span>
+            </div>
+            </div>
+		
+
+       <!-- <ADD ICON HERE> -->
+
+      <!-- Solar Systen by Prateek -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo ">
+          <a href="https://prateekm809.github.io/solar-system/" target="_blank">
+            <img src="assets/solar.svg" alt="github" height="100px">
+          </a>
+          <span class="hover_txt">Solar System</span>
+        </div>
+		
+      </div>
+
+      	  <!-- <ADD ICON HERE> -->
+
+      <!-- PSIT College By Sandhya -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="https://prajapatisan.github.io/psit/" target="_blank">
+            <img src="assets/psit.svg" alt="BlackBox" height="100">
+          </a>
+          <span class="hover_txt">PSIT College</span>
+        </div>
+      </div>
+
+        <!-- <ADD ICON HERE> -->
+
+      <!-- GitHub -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo ">
+          <a href="https://github.com/" target="_blank">
+            <img src="assets/github.svg" alt="github" height="100px">
+          </a>
+          <span class="hover_txt">GitHub</span>
+        </div>
+		
+      </div>
+
+      <!-- end of icons bar -->
+  
+    </div>
+  </div>
+  <div class="footer">
+    © 2023 | Help-Page | Developed By - Sudhir and Drishti 
+  <br>
+  <div class="footer">
+  <img src="https://hitwebcounter.com/counter/counter.php?page=8460744&style=0006&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" align="right" /></a>
+<div style="text-align: left;font-style: italic;"><a href="Website Forms/feedback/index.html" style="text-decoration: none; font-weight: bold;">Feedback</a></div></div></div>
+  <!-- <script>
+    // for dark mode toggle
+    
+  </script> -->
+  <script src="index.js"></script>
+  <script src="bookmarks.js"></script>
+  <!--  Bootstrap  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+    <!-- hitwebcounter Code START -->
+
+</body>
+</html>
